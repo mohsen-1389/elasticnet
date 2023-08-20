@@ -81,7 +81,7 @@ if __name__ == "__main__":
         # export MLFLOW_TRACKING_PASSWORD=64caa9604dd6bde36633ba64b044c3f83be99216
         # python script.py
         
-        remote_server_uri = 'https://dagshub.com/mohsen-1389/mlflow-test-remote-server.mlflow'
+        remote_server_uri = 'https://dagshub.com/mohsen-1389/elasticnet.mlflow'
         mlflow.set_tracking_uri(remote_server_uri)
         os.environ['MLFLOW_TRACKING_USERNAME'] = 'mohsen-1389'
         os.environ['MLFLOW_TRACKING_PASSWORD'] = '64caa9604dd6bde36633ba64b044c3f83be99216'
@@ -96,4 +96,5 @@ if __name__ == "__main__":
             mlflow.sklearn.log_model(
                 lr, "model", registered_model_name="ElasticnetWineModel")
         else:
-            mlflow.sklearn.log_model(lr, "model")
+            pass
+            # mlflow.sklearn.log_model(lr, "model")
